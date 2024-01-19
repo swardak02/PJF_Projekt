@@ -1,0 +1,49 @@
+{% extends "base.html" %}{% block title %}Oferty{% endblock %}
+
+{% block content %}
+<h1>Aktualne oferty pracy</h1>
+
+    <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 80%;
+            margin-top: 20px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <table border="2" alling="center">
+        <thead>
+            <tr>
+                <th>Stanowsiko</th>
+                <th>Szczegółowy opis stanowiska</th>
+                <th>Stawka (zł brutto)</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for oferta_pracy in oferty_pracy %}
+                <tr>
+                    <td>{{ oferta_pracy.stanowisko }}</td>
+                    <td>{{ oferta_pracy.oferta }}</td>
+                    <td>{{ oferta_pracy.stawka }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
+{% endblock %}
