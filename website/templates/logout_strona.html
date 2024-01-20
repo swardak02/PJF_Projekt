@@ -1,0 +1,49 @@
+{% extends "base.html" %}{% block title %}Strona po wylogowaniu{% endblock %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .content {
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        p {
+            color: #555;
+        }
+
+        a {
+            text-decoration: none;
+            color: #007BFF;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<div class="content">
+    <h1>Witaj na stronie po wylogowaniu!</h1>
+    <p>Ta strona wyświetla się po wylogowaniu użytkownika.</p>
+    <p>Przejdź do strony logowania, klikając <a href="/login">tutaj!</a>.</p>
+
+</div>
+</body>
+</html>
+{% endblock %}
